@@ -1,0 +1,17 @@
+#Copyright 2021 Extra-Keys
+#Written by : Misha Korzhik
+#Github     : http://github.com/mishakorzik
+
+# new shortcut and commands
+shortcut.create-session = ctrl + 0
+shortcut.next-session = ctrl + 5
+shortcut.previous-session = ctrl + 4
+shortcut.rename-session = ctrl  + 9
+
+# fix keyboard bug
+forcece-char-based-input = true
+ctrl-space-workaround = true
+
+# add new termux extra keys
+extra-keys = [['ESC','/','-','HOME','UP','F2','END'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','FN']]
+
