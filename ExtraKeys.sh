@@ -8,83 +8,74 @@ clear
 echo "${BLUE}------------ ------------"
 echo "| ${RED} Select Option ${BLUE}        |"
 echo "|------- ----  ----------|"
-echo "| ${GREEN}1. Add Extra Keys 1${BLUE}  "
-echo "| ${GREEN}2. Add Extra Keys 2${BLUE}  "
-echo "| ${GREEN}3. Add Extra Keys 3${BLUE}  "
-echo "| ${GREEN}4. More Tools from Us${BLUE}"
-echo "| ${GREEN}5. Exit Utility${BLUE}"
+echo "| ${GREEN}1. Add Extra Keys 1${BLUE}    |"
+echo "| ${GREEN}2. Add Extra Keys 2${BLUE}    |"
+echo "| ${GREEN}3. Add Extra Keys 3${BLUE}    |"
+echo "| ${GREEN}4. Exit Utility${BLUE}        |"
 echo "|                        |"
-echo "| ${RED}While 1/2/3/4/5:${BLUE}       |"
+echo "| ${RED}While 1/2/3/4:${BLUE}         |"
 echo "----  ---------- ------     "
 read numb
 clear
-echo "${BLUE}------------ ---------"
-echo "| ${RED} Select Option ${BLUE}     |"
-echo "|------- ----  -------|"
-echo "| ${CYAN}1. Add Extra Keys 1${BLUE} "
-echo "| ${CYAN}2. Add Extra Keys 2${BLUE} "
-echo "| ${CYAN}3. Add Extra Keys 3${BLUE} "
-echo "| ${CYAN}4. More Tools from Us${BLUE}"
-echo "|                                  |"
-echo "| ${RED}While 1/2/3/4/5:${BLUE}       |"
+echo "${BLUE}------------ ------------"
+echo "| ${RED} Select Option ${BLUE}        |"
+echo "|------- ----  ----------|"
+echo "| ${CYAN}1. Add Extra Keys 1${BLUE}    |"
+echo "| ${CYAN}2. Add Extra Keys 2${BLUE}    |"
+echo "| ${CYAN}3. Add Extra Keys 3${BLUE}    |"
+echo "| ${CYAN}4. Exit Utility${BLUE}        |"
+echo "|                        |"
+echo "| ${RED}While 1/2/3/4:${BLUE}         |"
 echo "----  ---------- ------     "
 if [ $numb = "1" ]
 then
-        echo -n "${BLUE}[${RED}!${BLUE}] ${GREEN}Loading Installing In Termux..."
-	echo ""
-	echo -n "${BLUE}[${RED}!${BLUE}] ${GREEN}All utilities will work..."
+        echo -n "${BLUE}[${RED}!${BLUE}] ${GREEN}Loading Utility! Please wait a moment..."
 	echo ""
 	cd
-	cd
-	chmod +x theme
-        chmod +x standart
-        chmod +x edit
+	cd Extra-Keys
+        bash 1Keys.sh
         cd
-        cd
-        rm -rf Termux-os
-        sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
        	sleep 0.1
         am broadcast --user 0 -a com.termux.app.reload_style com.termux > /dev/null
-	echo -n "${BLUE}[${GREEN}+${BLUE}] ${GREEN}Succesful Installed..!"
+	echo -n "${BLUE}[${GREEN}+${BLUE}] ${GREEN}Succesful Added Extra Keys..!"
 	echo ""
 else
         if [ $numb = "2" ]
         then
-                echo -n "${BLUE}[${RED}!${BLUE}] ${GREEN}Loading Installing In Linux..."
+                echo -n "${BLUE}[${RED}!${BLUE}] ${GREEN}Loading Utility! Please wait a moment..."
 		echo ""
-		echo -n "${BLUE}[${RED}!${BLUE}] ${GREEN}Some utilities will not work ...."
-		echo ""
-        	chmod +x msdconsole
-        	chmod +x msdconsoleUPD
-        	chmod +x msdc
-        	chmod +x msdServer
-        	chmod +x msd
-        	chmod +x ms
-        	chmod +x m
-        	chmod +x sys
-        	chmod +x system
-		sleep 1
-		echo -n "${BLUE}[${GREEN}+${BLUE}] ${GREEN}Succesful Installed..!"
+		cd
+		cd Extra-Keys
+		bash 2Keys.sh
+		cd
+		sleep 0.1
+		am broadcast --user 0 -a com.termux.app.reload_style com.termux > /dev/null
+		echo -n "${BLUE}[${GREEN}+${BLUE}] ${GREEN}Succesful Added Extra Keys..!"
 		echo ""
 	else
 		if [ $numb = "3" ]
 		then
-			echo -n "${BLUE}[${RED}!${BLUE}] ${GREEN}Loading Installing In NetHunter..."
-			echo ""
-			echo -n "${BLUE}[${RED}!${BLUE}] ${GREEN}Most utilities will not work ...."
-			echo ""
-			cd
-			cd /bin/
-			chmod +x msdconsole
-			chmod +x msdc
-			chmod +x msdconsoleUPD
-			chmod +x msdServer
-			chmod +x msd
-			chmod +x ms
-			chmod +x m
-			echo -n "${BLUE}[${GREEN}+${BLUE}] ${GREEN}Succesful Installed..!"
-                	echo ""
+			echo -n "${BLUE}[${RED}!${BLUE}] ${GREEN}Loading Utility! Please wait a moment..."
+		        echo ""
+		        cd
+		        cd Extra-Keys
+		        bash 3Keys.sh
+		        cd
+		        sleep 0.1
+		        am broadcast --user 0 -a com.termux.app.reload_style com.termux > /dev/null
+		        echo -n "${BLUE}[${GREEN}+${BLUE}] ${GREEN}Succesful Added Extra Keys..!"
+		        echo ""
+                else
+                        if [ $numb = "4" ]
+                        then
+                                echo -n "${BLUE}[${RED}!${BLUE}] ${RED}Terminaling... Bye bye! Have a nice day."
+		                echo ""
+                        fi   
 		fi
 	fi	
 fi
+
+
+
+
 
